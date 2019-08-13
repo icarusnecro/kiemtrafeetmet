@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    doi feet sang met :<input type="number" id="inputFoot" oninput="feetToMeter(this.value)" onchange="feetToMeter()"><br/>
+    doi met sang feet :<input type="number" id="inputMeter" oninput ="MeterToFeet(this.value)" onchange="MeterToFeet()">
+    </p>
+    <p> ket qua : <span id="output"></span>
+    </p>
+</head>
+<body>
+<script>
+    function feetToMeter(feetNum) {
+        feetNum = parseFloat(feetNum);
+        Math.round(feetNum*3.279);
+        document.getElementById("output").innerHTML =(feetNum*3.279).toFixed(3);
+
+    }
+    function MeterToFeet(metNum){
+        document.getElementById("output").innerHTML = (metNum*0.305).toFixed(3);
+    }
+</script>
+</body>
+</html>
